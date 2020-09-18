@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What's Happening Tonight!</title>
+
+<style>
+body {background-color: Violet;}
+h1   {color: black;}
+p    {color: black;}
+</style>
+</head>
+<body>
+
+<h1> See what's playing! </h1>
+<h2> Select your venue and date. </h2>
+
+<form method = post action = "{{ url_for('yourresults') }}" >
+  <input type="checkbox" id="1" name="venue" value="Mohawk">
+  <label for="1"> Mohawk </label><br>
+  <input type="checkbox" id="2" name="venue" value="Parish">
+  <label for="2"> Parish </label><br>
+  <input type="checkbox" id="3" name="venue" value="Friends">
+  <label for="3"> Friends </label><br>
+
+  <br>
+  <br>
+  <br>
+
+  <label for="month">Month:</label><br>
+  <input type="text" id="month" name="date"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

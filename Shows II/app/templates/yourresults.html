@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>"Your Results</title>
+<style>
+body {background-color: Violet;}
+h1   {color: black;}
+p    {color: black;}
+</style>
+
+</head>
+<body>
+
+
+<h1>Here is what's playing at {{checked_venues}} for {{date}}: </h1> 
+
+
+{%if "Mohawk" in checked_venues%}
+<h1> Mohawk: </h1>
+
+<p>{{mohawkband}}</p>
+
+{# {% set searchitem = mohawkband %} #}
+
+{%if mohawkband != "No bands playing at Mohawk that night."%}
+
+<br>
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{Mlstoflinks[0]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+
+
+
+<iframe width="266" height="150" src= "https://www.youtube.com/embed/{{Mlstoflinks[1]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{Mlstoflinks[2]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/{{Mlstoflinks[3]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<br>
+{%endif%}
+{%endif%}
+
+
+{%if "Parish" in checked_venues%}
+<h1> Parish: </h1>
+<p>{{parishband}}</p>
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{Plstoflinks[0]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<iframe width="266" height="150" src= "https://www.youtube.com/embed/{{Plstoflinks[1]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{Plstoflinks[2]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/{{Plstoflinks[3]}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+{%endif%}
+
+
+
+
+
+
+
+{%if "Friends" in checked_venues%}
+<h1> Friends </h1>
+<p>{{theywantasee3}}</p>
+{%endif%}
+
+
+<br>
+
+
+ <a href= "{{url_for('listen1', searchitem = searchitem)}}" > Obsolete Link </a> 
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> listen page  </title>
+</head>
+<body>
+
+<p> listen page </p>
+
+<p> i) {{somelamenum}} </p> 
+<p> ii) {{searchitem}} </p>
+<p> iii) {{thirdprint}} </p>
+{%set video1 = thirdprint[0]  %}
+{%set video2 = thirdprint[1]  %}
+{%set video3 = thirdprint[2]  %}
+{%set video4 = thirdprint[3]  %}
+
+
+
+
+<br>
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{video1}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<iframe width="266" height="150" src= "https://www.youtube.com/embed/{{video2}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{video3}} " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<iframe width="266" height="150" src="https://www.youtube.com/embed/{{video4}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<br>
+
+
+
+</body>
+</html>
